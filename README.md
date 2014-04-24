@@ -17,11 +17,11 @@ Install generator-wp-underscores
 git clone git@github.com:mrdink/generator-foundation_s.git
 ```
 
-cd into that repository and run npm link. It'll install required dependencies and install the package globally, using a symbolic link to your local version.
+cd into that repository and run [npm link](https://www.npmjs.org/doc/cli/npm-link.html). It'll install required dependencies and install the package globally, using a symbolic link to your local version.
 
 ```
 cd generator-foundation_s
-[npm link](https://www.npmjs.org/doc/cli/npm-link.html)
+npm link
 ```
 
 Create a folder in your WordPress themes folder and initiate the generator
