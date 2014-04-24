@@ -1,4 +1,40 @@
-generator-foundation_s
-======================
+# generator-foundation_s
 
-Yeoman generator for _s using Foundation
+A very simple [Yeoman](http://yeoman.io) generator for WordPress starter theme [_s](github.com/automattic/_s) using [Foundation](http://foundation.zurb.com/).
+
+
+## Getting Started
+
+Install [Yeoman](http://yeoman.io)
+
+```
+npm install -g yo
+```
+
+Install generator-wp-underscores
+
+```
+npm install -g generator-foundation_s
+```
+
+Create a folder in your WordPress themes folder and initiate the generator
+
+```
+mkdir theme-name && cd $_
+yo foundation_s
+```
+
+Answer some questions in the prompt and you're done!
+
+Run
+
+```
+grunt
+```
+to watch `.scss` files and live reload!
+
+**Note:** live reload works only if you're working on localhost, 192.168.50.4, or an URL ending in .dev
+
+## License
+
+[MIT License](http://en.wikipedia.org/wiki/MIT_License)

@@ -1,0 +1,10 @@
+{
+  "name": "<%= _.slugify(themename) %>",
+  "version": "0.0.1",
+  "dependencies": {
+    "foundation": "~5.2.2",
+    "respond": "~1.4.2",
+    "selectivizr": "~1.0.2",
+    "bourbon": "~3.1.8"
+  }
+}

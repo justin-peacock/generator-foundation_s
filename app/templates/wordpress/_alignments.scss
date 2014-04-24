@@ -1,0 +1,37 @@
+/*
+   Alignments
+   ========================================================================== */
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+blockquote.alignleft, img.alignleft {
+    margin: rem-calc(7 24 7 0);
+}
+
+.wp-caption.alignleft {
+    margin: rem-calc(7 14 7 0);
+}
+
+blockquote.alignright, img.alignright {
+    margin: rem-calc(7 0 7 24);
+}
+
+.wp-caption.alignright {
+    margin: rem-calc(7 0 7 14);
+}
+
+blockquote.aligncenter, img.aligncenter, .wp-caption.aligncenter {
+    margin-top: rem-calc(7);
+    margin-bottom: rem-calc(7);
+}

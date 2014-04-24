@@ -1,0 +1,43 @@
+{
+  "name": "generator-foundation_s",
+  "version": "5.2.2",
+  "description": "WordPress starter using Foundation and _s",
+  "keywords": [
+    "yeoman-generator",
+    "wordpress",
+    "_s",
+    "underscores"
+  ],
+  "homepage": "https://github.com/kdo/generator-wp-underscores",
+  "bugs": "https://github.com/kdo/generator-wp-underscores/issues",
+  "author": {
+    "name": "Karine"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kdo/generator-wp-underscores.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.0",
+    "chalk": "~0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0-rc.1"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}

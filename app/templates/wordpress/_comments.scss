@@ -1,0 +1,115 @@
+/*
+   Comments
+   ========================================================================== */
+.comment {
+    padding: 20px;
+    .comment {
+        padding: 0;
+    }
+}
+
+.children {
+    list-style: none;
+}
+
+.thread-odd {
+    background: $secondary-color;
+}
+
+#content .commentlist {
+    margin-left: 0;
+    list-style: none;
+}
+
+.comments-title {
+    margin-bottom: rem-calc(20);
+    font-size: rem-calc(24);
+    font-weight: normal;
+}
+
+.comments-area {
+    margin-top: rem-calc(125);
+    article {
+        margin: 0;
+        header {
+            margin: rem-calc(0 0 20);
+            overflow: hidden;
+            position: relative;
+            img {
+                float: left;
+                padding: 0;
+                line-height: 0;
+            }
+            cite, time {
+                display: block;
+                margin-left: rem-calc(55);
+            }
+            cite {
+                font-style: normal;
+                font-size: rem-calc(15);
+            }
+        }
+    }
+    cite b {
+        font-weight: normal;
+    }
+    article header {
+        time {
+            text-decoration: none;
+            font-size: rem-calc(12);
+            color: #5e5e5e;
+        }
+        a {
+            text-decoration: none;
+            color: #5e5e5e;
+            &:hover {
+                color: #21759b;
+            }
+        }
+        cite a {
+            color: #444;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        h4 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 6px 12px;
+            font-size: rem-calc(12);
+            font-weight: normal;
+            color: #fff;
+            border-radius: 3px;
+            border: 1px solid #007cbd;
+        }
+    }
+    .comment-author img {
+        border-radius: $global-rounded;
+    }
+    .bypostauthor cite {
+        span {
+            position: absolute;
+            margin-left: 5px;
+            padding: 2px 5px;
+            font-size: 10px;
+        }
+        b {
+            font-weight: bold;
+        }
+    }
+}
+
+.reply {
+}
+
+a {
+    &.comment-reply-link, &.comment-edit-link {
+        color: #686868;
+    }
+}
+
+.commentlist .pingback {
+    line-height: 1.714285714;
+    margin-bottom: 20px;
+}

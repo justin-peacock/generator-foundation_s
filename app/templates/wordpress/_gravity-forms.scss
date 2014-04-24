@@ -1,0 +1,13 @@
+/*
+   Gravity Forms
+   ========================================================================== */
+ul.gform_fields {
+	margin-left: 0;
+	list-style: none;
+	.gsection_title {
+		font-size: rem-calc(28);
+	}
+	.gfield_required {
+		color: $alert-color;
+	}
+}

@@ -1,0 +1,17 @@
+/*
+   Posts & Pages
+   ========================================================================== */
+.sticky {}
+
+.byline, .updated {
+    display: none;
+}
+
+.single .byline, .group-blog .byline {
+    display: inline;
+}
+
+.page-links {
+    clear: both;
+    margin: rem-calc(0 0 15);
+}
