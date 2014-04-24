@@ -116,7 +116,11 @@ module.exports = function(grunt) {
           "bower_components/foundation/js/foundation/foundation.reveal.js",
           "bower_components/foundation/js/foundation/foundation.tab.js",
           "bower_components/foundation/js/foundation/foundation.tooltip.js",
-          "bower_components/foundation/js/foundation/foundation.topbar.js"
+          "bower_components/foundation/js/foundation/foundation.topbar.js",
+
+          // Theme scripts
+          "src/js/_skip-link-focus-fix.js",
+          "src/js/_theme.js"
           ],
         dest: "tmp/js/scripts.js"
       }

@@ -81,29 +81,35 @@ FoundationS.prototype.askFor = function askFor() {
   }.bind(this));
 };
 
+FoundationS.prototype.installunderscores = function installunderscores() {
+  this.startertheme = 'https://github.com/Automattic/_s/archive/master.tar.gz';
+  this.log.info('Downloading & extracting ' + chalk.yellow('_s'));
+  this.tarball(this.startertheme, '.', this.async());
+};
+
 FoundationS.prototype.addfiles = function addfiles() {
   this.log(chalk.yellow('Creating dev folders and files'));
+  // make directories
   this.mkdir('assets/img');
   this.mkdir('assets/fonts');
   this.mkdir('assets/css');
   this.mkdir('assets/js');
   this.mkdir('assets/js/vendor');
   this.mkdir('scss');
+  this.mkdir('src');
+  // move Sass files
   this.copy('_settings.scss', 'scss/_settings.scss');
   this.copy('_globals.scss', 'scss/_globals.scss');
   this.copy('_app.scss', 'scss/app.scss');
   this.directory('wordpress', 'scss/wordpress');
   this.directory('theme', 'scss/theme');
+  // move grunt files
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('Gruntfile.js');
   this.copy('_gitignore', '.gitignore');
-};
-
-FoundationS.prototype.installunderscores = function installunderscores() {
-  this.startertheme = 'https://github.com/Automattic/_s/archive/master.tar.gz';
-  this.log.info('Downloading & extracting ' + chalk.yellow('_s'));
-  this.tarball(this.startertheme, '.', this.async());
+  // _s files
+  this.directory('src', 'src');
 };
 
 function findandreplace(dir) {
@@ -137,10 +143,34 @@ function findandreplace(dir) {
         self.log.info('Updating theme information in ' + file);
         result = result.replace(/http:\/\/automattic.com\//g, self.authoruri);
         result = result.replace(/Automattic/g, self.author);
+        result = result.replace(/site-footer/g, 'site-footer row');
+        result = result.replace(/site-info/g, 'site-info large-12 columns');
       }
+
+      // Add Row
+      else if (file == 'header.php') {
+        self.log.info('Added row in ' + file);
+        result = result.replace(/site-content/g, 'site-content row');
+      }
+
+      // Add Columns
+      else if (file == 'index.php' || file == 'single.php' || file == 'page.php' || file == 'archive.php' || file == 'search.php') {
+        self.log.info('Added columns in ' + file);
+        result = result.replace(/content-area/g, 'content-area medium-8 columns');
+      }
+      else if (file == 'sidebar.php') {
+        self.log.info('Added columns in ' + file);
+        result = result.replace(/widget-area/g, 'widget-area medium-4 columns');
+      }
+      else if (file == '404.php') {
+        self.log.info('Added columns in ' + file);
+        result = result.replace(/content-area/g, 'content-area medium-12 columns');
+      }
+
+      // Add live reload
       else if (file == 'functions.php') {
         self.log.info('Updating theme information in ' + file);
-        var themejs = "$1  wp_enqueue_script( '" + _.slugify(self.themename) + "-theme', get_template_directory_uri() . '/assets/js/scripts.min.js', array('jquery'), '0.0.1' );\n  if (in_array($_SERVER['SERVER_ADDR'], ['127.0.0.1', '192.168.50.4']) || pathinfo($_SERVER['SERVER_NAME'], PATHINFO_EXTENSION) == 'dev') {\n    wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js', '', false, true );\n  }\n $2"
+        var themejs = "$1\n  wp_enqueue_script( '" + _.slugify(self.themename) + "-scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '5.2.2' );\n\n  if (in_array($_SERVER['SERVER_ADDR'], ['127.0.0.1', '192.168.50.4']) || pathinfo($_SERVER['SERVER_NAME'], PATHINFO_EXTENSION) == 'dev') {\n    wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js', '', false, true );\n  }\n $2"
         result = result.replace(/(get_stylesheet_uri\(\) \);\n)(\n.wp_enqueue_script\()/, themejs);
       }
       fs.writeFileSync(file, result, 'utf8');
