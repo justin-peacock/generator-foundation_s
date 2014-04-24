@@ -14,7 +14,14 @@ npm install -g yo
 Install generator-wp-underscores
 
 ```
-npm install -g generator-foundation_s
+git clone git@github.com:mrdink/generator-foundation_s.git
+```
+
+cd into that repository and run npm link. It'll install required dependencies and install the package globally, using a symbolic link to your local version.
+
+```
+cd generator-foundation_s
+[npm link](https://www.npmjs.org/doc/cli/npm-link.html)
 ```
 
 Create a folder in your WordPress themes folder and initiate the generator
@@ -38,3 +45,9 @@ to watch `.scss` files and live reload!
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
+## Credits
+
+[generator-wp-underscores](https://github.com/kdo/generator-wp-underscores)
+
+[Foundation by Zurb](http://foundation.zurb.com/)

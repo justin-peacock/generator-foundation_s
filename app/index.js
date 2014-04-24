@@ -41,12 +41,12 @@ FoundationS.prototype.askFor = function askFor() {
   {
     name: 'themename',
     message: 'What is the name of your theme?',
-    default: 'My Theme'
+    default: 'Foundation_s'
   },
   {
     name: 'themeuri',
     message: 'What is the URL of your theme?',
-    default: 'http://github.com/mrdink/'
+    default: 'https://github.com/mrdink/generator-foundation_s'
   },
   {
     name: 'author',
@@ -90,8 +90,10 @@ FoundationS.prototype.addfiles = function addfiles() {
   this.mkdir('assets/js/vendor');
   this.mkdir('scss');
   this.copy('_settings.scss', 'scss/_settings.scss');
+  this.copy('_globals.scss', 'scss/_globals.scss');
   this.copy('_app.scss', 'scss/app.scss');
   this.directory('wordpress', 'scss/wordpress');
+  this.directory('theme', 'scss/theme');
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('Gruntfile.js');
