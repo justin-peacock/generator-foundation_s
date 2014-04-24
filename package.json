@@ -6,17 +6,18 @@
     "yeoman-generator",
     "wordpress",
     "_s",
-    "underscores"
+    "underscores",
+    "foundation"
   ],
-  "homepage": "https://github.com/kdo/generator-wp-underscores",
-  "bugs": "https://github.com/kdo/generator-wp-underscores/issues",
+  "homepage": "https://github.com/mrdink/generator-foundation_s",
+  "bugs": "https://github.com/mrdink/generator-foundation_s/issues",
   "author": {
-    "name": "Karine"
+    "name": "Justin"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kdo/generator-wp-underscores.git"
+    "url": "git@github.com:mrdink/generator-foundation_s.git"
   },
   "scripts": {
     "test": "mocha"
