@@ -130,16 +130,8 @@ function findandreplace(dir) {
       result = result.replace(/_s_/g, _.underscored(_.slugify(self.themename)) + "_");
       result = result.replace(/ _s/g, " " + self.themename);
       result = result.replace(/_s-/g, _.slugify(self.themename) + "-");
-      if (file == 'Gruntfile.js') {
-        self.log.info('Updating theme information in ' + file);
-        result = result.replace(/(Theme Name: )(.+)/g, '$1' + self.themename + "\\n'+");
-        result = result.replace(/(Theme URI: )(.+)/g, '$1' + self.themeuri + "\\n'+");
-        result = result.replace(/(Author: )(.+)/g, '$1' + self.author + "\\n'+");
-        result = result.replace(/(Author URI: )(.+)/g, '$1' + self.authoruri + "\\n'+");
-        result = result.replace(/(Description: )(.+)/g, '$1' + self.themedescription + "\\n'+");
-        result = result.replace(/(Version: )(.+)/g, '$1'  + self.themeversion + "\\n'+");
-      }
-      else if (file == 'footer.php') {
+
+      if (file == 'footer.php') {
         self.log.info('Updating theme information in ' + file);
         result = result.replace(/http:\/\/automattic.com\//g, self.authoruri);
         result = result.replace(/Automattic/g, self.author);

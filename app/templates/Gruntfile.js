@@ -31,12 +31,12 @@ module.exports = function(grunt) {
       add_banner: {
         options: {
           banner: '/*\n'+
-                      'Theme Name: Foundation_s\n'+
-                      'Theme URI: https://github.com/mrdink/generator-foundation_s\n'+
-                      'Description: WordPress theme built with Foundation and Underscores\n'+
-                      'Author: Justin Peacock\n'+
-                      'Author URI: http://byjust.in\n'+
-                      'Version: 5.2.2\n'+
+                      'Theme Name: <%= _.slugify(themename) %>\n'+
+                      'Theme URI: <%= _.slugify(themeuri) %>\n'+
+                      'Description: <%= _.slugify(themedescription) %>\n'+
+                      'Author: <%= _.slugify(author) %>\n'+
+                      'Author URI: <%= _.slugify(authoruri) %>\n'+
+                      'Version: <%= _.slugify(themeversion) %>\n'+
                       'License: GNU General Public License v2.0\n'+
                       'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n'+
                   '*/\n'
