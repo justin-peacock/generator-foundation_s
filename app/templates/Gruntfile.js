@@ -31,12 +31,12 @@ module.exports = function(grunt) {
       add_banner: {
         options: {
           banner: '/*\n'+
-                      'Theme Name: <%= _.slugify(themename) %>\n'+
-                      'Theme URI: <%= _.slugify(themeuri) %>\n'+
-                      'Description: <%= _.slugify(themedescription) %>\n'+
-                      'Author: <%= _.slugify(author) %>\n'+
-                      'Author URI: <%= _.slugify(authoruri) %>\n'+
-                      'Version: <%= _.slugify(themeversion) %>\n'+
+                      'Theme Name: <%= themename %>\n'+
+                      'Theme URI: <%= themeuri %>\n'+
+                      'Description: <%= themedescription %>\n'+
+                      'Author: <%= author %>\n'+
+                      'Author URI: <%= authoruri %>\n'+
+                      'Version: <%= themeversion %>\n'+
                       'License: GNU General Public License v2.0\n'+
                       'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n'+
                   '*/\n'
