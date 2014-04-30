@@ -111,6 +111,7 @@ FoundationS.prototype.addfiles = function addfiles() {
   this.copy('_gitignore', '.gitignore');
   // _s files
   this.directory('src', 'src');
+  this.copy('_functions.php', 'functions.php');
 };
 
 function findandreplace(dir) {
@@ -158,13 +159,6 @@ function findandreplace(dir) {
       else if (file == '404.php') {
         self.log.info('Added columns in ' + file);
         result = result.replace(/content-area/g, 'content-area medium-12 columns');
-      }
-
-      // Add live reload
-      else if (file == 'functions.php') {
-        self.log.info('Updating theme information in ' + file);
-        var themejs = "$1\n  wp_enqueue_script( '" + _.slugify(self.themename) + "-scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array( 'jquery' ), '5.2.2' );\n\n  if (in_array($_SERVER['SERVER_ADDR'], ['127.0.0.1', '192.168.50.4']) || pathinfo($_SERVER['SERVER_NAME'], PATHINFO_EXTENSION) == 'dev') {\n    wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js', '', false, true );\n  }\n $2"
-        result = result.replace(/(get_stylesheet_uri\(\) \);\n)(\n.wp_enqueue_script\()/, themejs);
       }
       fs.writeFileSync(file, result, 'utf8');
     }
