@@ -101,6 +101,7 @@ FoundationS.prototype.addfiles = function addfiles() {
   this.copy('_settings.scss', 'scss/_settings.scss');
   this.copy('_globals.scss', 'scss/_globals.scss');
   this.copy('_app.scss', 'scss/app.scss');
+  this.directory('inc', 'inc');
   this.directory('wordpress', 'scss/wordpress');
   this.directory('theme', 'scss/theme');
   // move grunt files
