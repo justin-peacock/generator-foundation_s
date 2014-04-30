@@ -22,6 +22,9 @@ if ( ! function_exists( '_s_setup' ) ) :
  */
 function _s_setup() {
 
+	// Add Editor Style
+	add_editor_style();
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.

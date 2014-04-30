@@ -1,0 +1,6 @@
+/*
+Theme Name: <%= themename %>
+Description: Used to style the TinyMCE editor.
+*/
+
+@import url("style.css");

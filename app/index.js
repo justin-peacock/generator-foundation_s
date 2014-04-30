@@ -112,6 +112,7 @@ FoundationS.prototype.addfiles = function addfiles() {
   // _s files
   this.directory('src', 'src');
   this.copy('_functions.php', 'functions.php');
+  this.copy('_editor-styles.css', 'editor-styles.css');
 };
 
 function findandreplace(dir) {
