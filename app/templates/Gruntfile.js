@@ -61,7 +61,7 @@ module.exports = function(grunt) {
     // Create an IE specific stylesheet since IE8 doesn't know what 'rem' is
     pixrem: {
       options: {
-        rootvalue: '18px',
+        rootvalue: '16px',
         replace: true
       },
       dist: {
