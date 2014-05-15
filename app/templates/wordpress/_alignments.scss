@@ -31,7 +31,27 @@ blockquote.alignright, img.alignright {
     margin: rem-calc(7 0 7 14);
 }
 
-blockquote.aligncenter, img.aligncenter, .wp-caption.aligncenter {
-    margin-top: rem-calc(7);
-    margin-bottom: rem-calc(7);
+.wp-caption {
+    margin-bottom: rem-calc(24);
+    img[class*="wp-image-"] {
+        display: block;
+        margin: 0;
+    }
+    color: #767676;
+}
+
+.wp-caption-text {
+    @include box-sizing(border-box);
+    font-size: rem-calc(12);
+    font-style: italic;
+    line-height: 1.5;
+    margin: rem-calc(9 0);
+    padding-right: rem-calc(10);
+}
+
+.wp-smiley {
+    border: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
 }

@@ -1,0 +1,36 @@
+/*
+   Widgets
+   ========================================================================== */
+.widget {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: rem-calc(30);
+    word-wrap: break-word;
+    ul, ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        padding: 5px 0;
+    }
+    .children li:last-child {
+        padding-bottom: 0;
+    }
+    li > ul,
+    li > ol {
+        margin-left: rem-calc(20);
+    }
+    select {
+        max-width: 100%;
+    }
+    .search-field {
+        margin-bottom: 0;
+    }
+}
+
+/* Search widget */
+.search-form .search-submit {
+    display: none;
+}

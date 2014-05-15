@@ -1,42 +1,6 @@
 /*
    Media
    ========================================================================== */
-.site-content blockquote {
-    &.alignleft, &.alignright {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        padding-top: rem-calc(17);
-        width: 50%;
-    }
-    &.alignleft p, &.alignright p {
-        margin-bottom: rem-calc(17);
-    }
-}
-
-.wp-caption {
-    margin-bottom: rem-calc(24);
-    img[class*="wp-image-"] {
-        display: block;
-        margin: 0;
-    }
-    color: #767676;
-}
-
-.wp-caption-text {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: rem-calc(12);
-    font-style: italic;
-    line-height: 1.5;
-    margin: rem-calc(9 0);
-    padding-right: rem-calc(10);
-}
-
-.wp-smiley {
-    display: none;
-}
-
 /* Responsive images. Fluid images for posts, comments, and widgets */
 .comment-content img, .entry-content img, .entry-summary img, .widget img, .wp-caption {
     max-width: 100%;
@@ -67,7 +31,7 @@ img {
 
 /* Make sure embeds and iframes fit their containers */
 embed, iframe, object, video {
-    margin-bottom: rem-calc(24);
+    margin-bottom: 24px;
     max-width: 100%;
 }
 

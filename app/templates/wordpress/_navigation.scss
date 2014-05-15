@@ -2,20 +2,18 @@
    Navigation
    ========================================================================== */
 .site-main [class*="navigation"] {
-	margin: rem-calc(60 0);
-	// overflow: hidden;
+    margin: 0 0 rem-calc(30);
+    @include clearfix;
 }
-.nav-links {
-	a {
-		font-size: rem-calc(13);
-	}
-}
-[class*="navigation"] .nav-previous {
-	float: left;
-	width: 50%;
-}
-[class*="navigation"] .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+
+[class*="navigation"] {
+    .nav-previous {
+        float: left;
+        width: 50%;
+    }
+    .nav-next {
+        float: right;
+        text-align: right;
+        width: 50%;
+    }
 }

@@ -62,6 +62,7 @@
 @import "wordpress/clearing";
 @import "wordpress/posts-pages";
 @import "wordpress/navigation";
+@import "wordpress/widgets";
 @import "wordpress/jetpack";
 @import "wordpress/media";
 @import "wordpress/comments";
@@ -73,6 +74,7 @@
 /* ==========================================================================
    Theme Layout
    ========================================================================== */
+@import "mixins";
 @import "globals";
 @import "theme/header";
 @import "theme/navigation";
