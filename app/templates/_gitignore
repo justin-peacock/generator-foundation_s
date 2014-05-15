@@ -20,12 +20,13 @@ find.php
 .sass-cache
 node_modules
 bower_components
-src
+tmp
 
 # Default themes
 wp-content/themes/twentyeleven
 wp-content/themes/twentytwelve
-wp-content/themes/twentythireen
+wp-content/themes/twentythirteen
+wp-content/themes/twentyfourteen
 
 # wordpress specific
 license.txt
