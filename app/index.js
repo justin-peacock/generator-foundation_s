@@ -99,6 +99,7 @@ FoundationS.prototype.addfiles = function addfiles() {
   // move Sass files
   this.copy('_settings.scss', 'scss/_settings.scss');
   this.copy('_globals.scss', 'scss/_globals.scss');
+  this.copy('_mixins.scss', 'scss/_mixins.scss');
   this.copy('_app.scss', 'scss/app.scss');
   this.directory('inc', 'inc');
   this.directory('wordpress', 'scss/wordpress');
